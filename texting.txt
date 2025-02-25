@@ -1,0 +1,22 @@
+file = "jacob.txt"
+while True:
+
+    find =open(file,"r", encoding = "utf-8").read()
+    interim_file = find
+
+    print("This program is for if you have used a wrong word or words in a text file and want to replace it with the correct word. Please download and insert a txt file. This could be a could also be used to replace a name or word in the full text file.")
+    wrong = input("\nWhat word would you like to replace? ")
+    correct = input("\nWhat word would you like to replace it with? ")
+
+    new_file = open("Corrected_file.txt", "w", encoding = "utf-8").write(interim_file)
+    find_2= open("Corrected_file.txt", "r", encoding = "utf-8").read(new_file)
+    new = find_2.replace(wrong.lower(), correct.lower())
+    find_3= new
+    new_2 = find_3.replace(wrong.title(), correct.title())
+
+    print(new_2)
+    new_name =  open("Corrected_file.txt", "w", encoding = "utf-8").write(new_2)
+    done=input("Are you done? Y or N: ")
+    file = "Corrected_file.txt"
+    if done.capitalize() == "Y":
+        break
