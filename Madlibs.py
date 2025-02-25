@@ -56,3 +56,4 @@ new = new.replace("0", ten)
 
 print(new)
 filled =open(game_out, "w", encoding="utf-8").write(new)
+#coment
